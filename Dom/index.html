@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="p-3">
+    <h1 class="text-center mt-5 text-3xl font-bold text-purple-500">
+      Mini-Bank App
+    </h1>
+
+    <p class="font-bold my-3 text-blue-500 text-center">
+      Balance: <span id="balance">0</span>
+    </p>
+
+    <p id="status" class="text-center font-semi-bold text-purple-400"></p>
+
+    <input
+      class="block border border-purple-500 rounded-md p-2 mx-auto"
+      type="number"
+      id="amount"
+      placeholder="Input Amount"
+    />
+    <div class="flex flex-wrap my-4 gap-5 items-center justify-center">
+      <button id="check" class="bg-purple-300 text-white rounded-lg px-3 py-2">
+        Check Balance
+      </button>
+      <button id="deposit" class="bg-green-300 text-white rounded-lg px-3 py-2">
+        Deposit Amount
+      </button>
+
+      <button id="withdraw" class="bg-red-300 text-white rounded-lg px-3 py-2">Withdraw Amount</button>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
