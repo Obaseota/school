@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="p-3">
+    <h1 class="text-center mt-5 text-3xl font-bold text-purple-500">
+      Book Mangement System
+    </h1>
+
+    <p class="font-bold my-3 text-blue-500 text-center">
+      Balance: <span id="balance">0</span>
+    </p>
+
+    <p id="status" class="text-center font-semi-bold text-purple-400"></p>
+
+
+    <form id="book-form">
+      <input
+        class="block border border-purple-500 rounded-md p-2 mx-auto"
+        type="text"
+        id="book"
+        placeholder="Add Book"
+        required
+      />
+
+      <button
+        id="add-book"
+        class="bg-red-300 text-white rounded-lg px-3 my-3 py-2 mx-auto block"
+      >
+        Add Book
+      </button>
+    </form>
+
+    <div class="bg-purple-300 w-[40%] mx-auto my-5 p-5">
+      <p class="text-2xl">Books</p>
+      <ul id="book-list"></ul>
+    </div>
+  </body>
+  <script src="book.js"></script>
+</html>
