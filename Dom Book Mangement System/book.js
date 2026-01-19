@@ -20,10 +20,27 @@ bookForm.addEventListener("submit", function (e) {
 
   const book = document.createElement("li");
 
-  book.textContent = bookInput.value;
+  book.innerHTML = `
+  <p>${bookInput.value}</p>
+  <button class="delete-btn bg-red-300 rounded-lg p-3 ml-auto block">Delete me</button>`;
+
+  const deleteBtn = book.querySelector(".delete-btn");
+
+  deleteBtn.addEventListener("click", function () {
+    this.parentElement.remove();
+  });
+
+  // book.textContent = bookInput.value;
   book.classList.add("book");
 
   bookList.appendChild(book);
 
   bookInput.value = "";
+});
+
+const traverseDiv = document.querySelector("#traverse");
+const traverseBtn = document.querySelector("#traverse button");
+
+traverseBtn.addEventListener("click", function () {
+  this.parentElement.style.backgroundColor = "red";
 });
