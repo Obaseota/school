@@ -13,6 +13,7 @@ const bookForm = document.querySelector("#book-form");
 
 //   bookInput.value = "";
 // });
+const books = [];
 
 bookForm.addEventListener("submit", function (e) {
   e.preventDefault();
